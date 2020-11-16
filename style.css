@@ -39,3 +39,129 @@ h3 {
     line-height:1;
     text-align:left;
 }
+/* --------------------------------------NAVIGATION-------------------------------------- */
+.navigation {
+    display:flex;
+    margin-left:auto;
+}
+
+.nav-list {
+    display:flex;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.nav-list li {
+    width:25px;
+    margin:0 10px;
+    position:relative;
+}
+
+.nav-list li:after {
+    content:'';
+    width:100%;
+    visibility:hidden;
+    transition:all 0.5s ease 1s;
+    opacity:0;
+    transform:translateY(-20px);
+    height:2px;
+    border-radius:1px;
+    background:#418dfc;
+    position:absolute;
+    top:-7px;
+    left:0;
+}
+
+.nav-list li#active:after {
+    visibility:visible;
+    opacity:1;
+    transform:translateY(0);
+}
+
+.nav-list li img {
+    width:100%;
+    height:auto;
+}
+.navigation .icon {
+    display:none;
+    font-size:32px;
+    color:#418dfc;
+    position:relative;
+    z-index:1;
+}
+
+.burger {
+    width:32px;
+    height:26px;
+    position:fixed;
+    top:20px;
+    right:10px;
+    cursor:pointer;
+    z-index:3;
+}
+
+.burger.active .burger-top {
+    transform:rotate(45deg);
+    top:12px;
+}
+
+.burger.active .burger-middle {
+    opacity:0;
+}
+
+.burger.active .burger-bottom {
+    transform:rotate(135deg);
+    top:12px;
+}
+
+.burger-top,
+.burger-middle,
+.burger-bottom {
+    display:block;
+    position:absolute;
+    width:30px;
+    height:5px;
+    background:#418dfc;
+    left:0;
+    border-radius:2px;
+    transition:all 0.4s ease;
+}
+
+.burger-top {
+    top:0px;
+}
+
+.burger-middle {
+    top:10px;
+}
+
+.burger-bottom {
+    top:20px;
+    right:0;
+}
+
+
+.nav-list li:hover .menu-hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-hover {
+    display: block;
+    background: #fff;
+    padding: 5px;
+    border-radius:2px;
+    position: absolute;
+    top:120%;
+    left:-10px;
+    color: #418dfc;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s;
+    font-family: 'Montserrat', sans-serif;
+    font-size:10px;
+    box-shadow: 0 1px 8px 0 rgba(66,66,66,.06), 0 2px 14px 0 rgba(66,66,66,.12);
+}
