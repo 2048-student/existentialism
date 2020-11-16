@@ -1,21 +1,4 @@
 $( document ).ready(function() {
-    /*DYNAMIC IFRAMES*/
-    let ww = $(window).width();
-    let iframeWidthSokoban = ww < 725 ? 300 : 375;
-    let iframeWidth15 = ww < 725 ? 270 : 437;
-    let iframeHeightSokoban = ww < 725 ? 300 : 375;
-    let iframeHeight15 = ww < 725 ? 200 : 350;
-
-    $('#game15').css('width', iframeWidth15+'px');
-    $('#game15').css('height', iframeHeight15+'px');
-    $('#sokoban').css('width', iframeWidthSokoban+'px');
-    $('#sokoban').css('height', iframeHeightSokoban+'px');
-
-    console.log(iframeWidth15, $('#game15'));
-    console.log(iframeHeight15, $('#game15'));
-    console.log(iframeWidthSokoban, $('#sokoban'));
-    console.log(iframeHeightSokoban, $('#sokoban'));
-
     /*TRANSITION CODE -- ADD CLASSES*/
     $('.header, .footer').addClass('visible');
     $('.nav-list li:nth-child(even)').addClass('visible-even');
@@ -178,44 +161,16 @@ console.log($('.dots'));
 const pageName = $('body').attr('id');
 const pages = [
     {
-        name:'aboutme',
-        sections:['welcome', 'piano', 'karate', 'physics', 'math', 'computer science', 'fundraising']
+        name:'home',
+        sections:['welcome', 'problemone', 'problemtwo']
     },
     {
-        name:'schools',
-        sections:['schools','secondary school','middle school','elementary school']
+        name:'problemone',
+        sections:['problem one', 'hemingway', 'heidegger', 'sartre', 'guenther', 'sontag', 'stanford prison experiment']
     },
     {
-        name:'math',
-        sections:['mathematics','early age','camps','competitions','courses and programs']
-    },
-    {
-        name:'science',
-        sections:['physics','early age','camps','high school','extracurricular']
-    },
-    {
-        name:'music',
-        sections:['music','early age','videos','competitions']
-    },
-    {
-        name:'theatre',
-        sections:['theatre','riverdale rising stars','gallery']
-    },
-    {
-        name:'cs',
-        sections:['cs','general interest','game gallery','cs at school','outside school','additional projects']
-    },
-    {
-        name:'camps',
-        sections:['camps','math camps','science camps','miscellaneous']
-    },
-    {
-        name:'sports',
-        sections:['karate','starting out','getting to black belt','demonstrations']
-    },
-    {
-        name:'fundraising',
-        sections:['fundraising','why fundraising?','physics team','riverdale rising stars','stuyzon/rrszon','mask initiative']
+        name:'problemtwo',
+        sections:['problem two', 'sartre', 'overbye','pinker', 'kant', 'singer', 'nagel']
     }
 ];
 const page = pages.find(page => page.name === pageName);
