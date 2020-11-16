@@ -13,7 +13,34 @@
     <script src="full-page-scroll.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
-  <body>
+  <body id="welcome">
+    <header class="header">
+      <div class="logo">
+          <a href="/"><img src="philosophy.svg"></a>
+      </div>
+      <h1>Andrew's Existentialism Project</h1>
+      <nav class="navigation" id="nav">
+        <ul class="nav-list">
+            <li id="navwelcome"><a href="index.php" class="menu-link"><img src="home.svg"><span class="menu-hover short-len--mod">Welcome</span></a></li>
+            <li id="navschools"><a href="schools.php" class="menu-link"><img src="images/school.svg"><span class="menu-hover">Problem One</span></a></li>
+            <li id="navmath"><a href="math.php" class="menu-link"><img src="images/function.svg"><span class="menu-hover">Problem Two</span></a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon navbar">
+            <div class="burger">
+                <span class="burger-top"></span>
+                <span class="burger-middle"></span>
+                <span class="burger-bottom"></span>
+            </div>
+        </a>
+    </nav>
+    <script>
+        $(document).ready(function(){
+      var mybodyid = $('body').attr('id');
+      var mynavid = '#nav' + mybodyid;
+      $(mynavid).attr('id','active');
+    });
+    </script>
 
+    </header>
   </body>
 </html>
